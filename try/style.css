@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #434040;
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .custom-select select {
+    display: none; /* Приховуємо оригінальний елемент select */
+  }
+  
+  .custom-select::after {
+    content: "";
+    background-image: url(/1-removebg-preview.png); /* Замініть 'адреса-зображення' на URL вашого зображення */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30px; /* При необхідності відрегулюйте ширину */
+    pointer-events: none; /* Забороняємо зображенню перешкоджати взаємодії з елементом select */
+  }
+  
+  .custom-select select option {
+    padding-left: 40px; /* Додаємо простір для зображення */
+  }
+  
